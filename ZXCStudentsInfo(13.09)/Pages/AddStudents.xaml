@@ -1,0 +1,61 @@
+﻿<Page x:Class="ZXCStudentsInfo.Pages.AddStudents"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZXCStudentsInfo.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1100"
+      Title="AddStudents">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock Text="ФИО" Foreground="White" Height="20" Width="150" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+            <TextBlock Text="Возраст" Foreground="White" Height="25" Width="150" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+            <TextBlock Text="Курс" Foreground="White" Height="25" Width="150" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+            <TextBlock Text="Специальность" Foreground="White" Height="25" Width="150" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+            <TextBlock Text="Дата рождения" Foreground="White" Height="25" Width="150" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+            <TextBlock Text="Номер группы" Foreground="White" Height="25" Width="150" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+            <TextBlock Text="Стипендия" Foreground="White" Height="25" Width="150" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+            <TextBlock Text="Год поступления" Foreground="White" Height="25" Width="153" FontSize="16" Margin="4" FontFamily="Deutsch Gothic"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox Name="txtNameUser"  Width="200" Margin="6" Height="20"/>
+            <TextBox Name="txtAgeUser"  Width="200" Margin="6" Height="20"/>
+            <TextBox Name="txtKyrsUser"  Width="200" Margin="6" Height="20"/>
+            <ComboBox Name="cmbSpecialnost"  Width="200" Margin="6" Height="20" />
+            <TextBox Name="txtDateBrtithDayUser"  Width="200" Margin="6" Height="20"/>
+            <TextBox Name="txtNumberGroupUser"  Width="200" Margin="6" Height="20"/>
+            <TextBox Name="txtStipendiyaUser"  Width="200" Margin="6" Height="20"/>
+            <TextBox Name="txtYearPostypleniyaUser"  Width="200" Margin="6" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Name="btnBack" Content="Назад" Click="btnBack_Click" Height="75" Width="100" FontFamily="Deutsch Gothic">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Pages/XFtQw4kxPZs.jpg" Opacity="0.25"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Name="btnSavechanges" Content="Сохранить" Click="btnSavechanges_Click" Height="75" Width="100" FontFamily="Deutsch Gothic">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Pages/XFtQw4kxPZs.jpg" Opacity="0.25"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

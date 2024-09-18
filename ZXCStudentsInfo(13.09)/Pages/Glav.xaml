@@ -1,0 +1,99 @@
+﻿<Page x:Class="ZXCStudentsInfo.Pages.Glav"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZXCStudentsInfo.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1100"
+      Title="Glav">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" 
+      FontFamily="Deutsch Gothic" Text="Список Студентов" HorizontalAlignment="Center" FontSize="24" Background="White">
+        </TextBlock>
+        <StackPanel HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1"
+               VerticalAlignment="Top"  Grid.RowSpan="3" Grid.ColumnSpan="4" >
+            <DataGrid Name="dtgUsers" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"
+                 Binding="{Binding Id}" Width="50"/>
+                    <DataGridTextColumn Header="FIO"
+                 Binding="{Binding FIO}" Width="220"/>
+                    <DataGridTextColumn Header="Age"
+                 Binding="{Binding Age}" Width="50"/>
+                    <DataGridTextColumn Header="Kyrs"
+                 Binding="{Binding Kyrs}" Width="50"/>
+                    <DataGridTextColumn Header="Specialnost"
+                 Binding="{Binding Specialnosts.Name}" Width="100"/>
+                    <DataGridTextColumn Header="DateBrithDay"
+                 Binding="{Binding DateBrithDay}" Width="100"/>
+                    <DataGridTextColumn Header="NumberGroup"
+                 Binding="{Binding NumberGroup}" Width="100"/>
+                    <DataGridTextColumn Header="Stipendiya"
+                 Binding="{Binding Stipendiya}" Width="80"/>
+                    <DataGridTextColumn Header="YearPostypleniya"
+                 Binding="{Binding YearPostypleniya}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="1" Grid.RowSpan="3">
+        <Button Grid.Column="3" Grid.ColumnSpan="1" 
+    Grid.Row="1"
+    Name="btnCreateStudents"
+    Width="120"
+    Height="95"
+    Margin="5"            
+    Content="Добавить"
+    FontSize="14"
+    Click="btnCreateStudents_Click"
+    FontFamily="Deutsch Gothic" VerticalAlignment="Top" HorizontalAlignment="Right" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pages/1624973156_preview_unnamed (1).jpg" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="3"
+            Grid.Row="1"
+            Name="btnDeleteStudents"
+            Width="120"
+            Height="95"
+            Margin="5"
+            Content="Удалить"
+            FontSize="14"
+            Click="btnDeleteStudents_Click"
+            FontFamily="Deutsch Gothic" VerticalAlignment="Center" HorizontalAlignment="Right" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pages/1624973156_preview_unnamed (1).jpg" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="3"
+    Grid.Row="1"
+    Name="btnRedactStudents"
+    Width="120"
+            Height="95"
+            Margin="5"
+    Content="Редактировать"
+    FontSize="12"
+    Click="btnRedactStudents_Click"
+    FontFamily="Deutsch Gothic" VerticalAlignment="Bottom" HorizontalAlignment="Right" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pages/1624973156_preview_unnamed (1).jpg" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        </StackPanel>
+    </Grid>
+</Page>

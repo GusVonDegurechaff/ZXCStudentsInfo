@@ -1,0 +1,56 @@
+﻿<Window x:Class="ZXCBaseFirst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZXCBaseFirst"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="1100">
+    <Window.Background>
+        <ImageBrush ImageSource="/maxresdefault123.jpg" Opacity="0.35"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" 
+  FontFamily="Deutsch Gothic" Text="Список Студентов" HorizontalAlignment="Center" FontSize="24" Background="White">
+        </TextBlock>
+        <StackPanel HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1"
+           VerticalAlignment="Top"  Grid.RowSpan="3" Grid.ColumnSpan="4" >
+            <DataGrid Name="dtgUsers" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"
+             Binding="{Binding Id}" Width="50"/>
+                    <DataGridTextColumn Header="FIO"
+             Binding="{Binding Fio}" Width="220"/>
+                    <DataGridTextColumn Header="Age"
+             Binding="{Binding Age}" Width="50"/>
+                    <DataGridTextColumn Header="Kyrs"
+             Binding="{Binding Kyrs}" Width="50"/>
+                    <DataGridTextColumn Header="Specialnost"
+             Binding="{Binding Specialnost.Name}" Width="100"/>
+                    <DataGridTextColumn Header="DateBrithDay"
+             Binding="{Binding DateBrithDay}" Width="100"/>
+                    <DataGridTextColumn Header="NumberGroup"
+             Binding="{Binding NumberGroup}" Width="100"/>
+                    <DataGridTextColumn Header="Stipendiya"
+             Binding="{Binding Stipendiya}" Width="80"/>
+                    <DataGridTextColumn Header="YearPostypleniya"
+             Binding="{Binding YearPostypleniya}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
